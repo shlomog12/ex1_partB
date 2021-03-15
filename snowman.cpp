@@ -31,10 +31,12 @@ const int MINIMUM_CHOICE = 1;
 const int MAXIMUM_CHOICE = 4;
 const int COUNTING_BASE = 10;
 
-const int CASE_A = 1;
-const int CASE_B = 2;
-const int CASE_C = 3;
-const int CASE_D = 4;
+enum cases{
+    case_a=1,
+    case_b=2,
+    case_c=3,
+};
+
 
 
 using namespace std;
@@ -58,67 +60,67 @@ namespace ariel{
 
     string create_snowman_base(int choice){
         integrity_check(choice);
-        if (choice==CASE_A) { return " ( : ) ";}
-        if (choice==CASE_B) { return " (\" \") ";}
-        if (choice==CASE_C) { return " (___) ";}
+        if (choice==case_a) { return " ( : ) ";}
+        if (choice==case_b) { return " (\" \") ";}
+        if (choice==case_c) { return " (___) ";}
         return " (   ) ";
     }
 
     string create_snowman_torso(int choice){
         integrity_check(choice);
-        if (choice==CASE_A) { return "( : )";}
-        if (choice==CASE_B) { return "(] [)";}
-        if (choice==CASE_C) { return "(> <)";}
+        if (choice==case_a) { return "( : )";}
+        if (choice==case_b) { return "(] [)";}
+        if (choice==case_c) { return "(> <)";}
         return "(   )";
     }
 
     string create_upper_right_arm(int choice){
         integrity_check(choice);
-        if (choice==CASE_B) { return "/";}
+        if (choice==case_b) { return "/";}
         return " ";
       }
 
     string create_lower_right_arm(int choice){
         integrity_check(choice);
-        if (choice==CASE_A) { return ">";}
-        if (choice==CASE_C) { return "\\";}
+        if (choice==case_a) { return ">";}
+        if (choice==case_c) { return "\\";}
         return " ";
         }     
 
     string create_upper_left_arm(int choice){
             integrity_check(choice);
-             if (choice==CASE_B) { return "\\";}
+             if (choice==case_b) { return "\\";}
                 return " ";
              }
 
     string create_lower_left_arm(int choice){
             integrity_check(choice);
-            if (choice==CASE_A) { return "<";}
-            if (choice==CASE_C) { return "/";}
+            if (choice==case_a) { return "<";}
+            if (choice==case_c) { return "/";}
             return " ";
         }  
 
     string create_snowman_eye(int choice){
             integrity_check(choice);
-            if (choice==CASE_A) { return ".";}
-            if (choice==CASE_B) { return "o";}
-            if (choice==CASE_C) { return "O";}
+            if (choice==case_a) { return ".";}
+            if (choice==case_b) { return "o";}
+            if (choice==case_c) { return "O";}
             return "-";
         }
 
     string create_snowman_mouth(int choice){
         integrity_check(choice);
-        if (choice==CASE_A) { return ",";}
-        if (choice==CASE_B) { return ".";}
-        if (choice==CASE_C) { return "_";}
+        if (choice==case_a) { return ",";}
+        if (choice==case_b) { return ".";}
+        if (choice==case_c) { return "_";}
         return " ";
     }
 
     string create_snowman_head(int choice){
         integrity_check(choice);
-        if (choice==CASE_A) { return " _===_ ";}
-        if (choice==CASE_B) { return "  ___  \n ..... ";}
-        if (choice==CASE_C) { return "   _  \n  /_\\  ";}
+        if (choice==case_a) { return " _===_ ";}
+        if (choice==case_b) { return "  ___  \n ..... ";}
+        if (choice==case_c) { return "   _  \n  /_\\  ";}
         return "  ___  \n (_*_) ";
     }
 

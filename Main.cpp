@@ -42,6 +42,18 @@ int main() {
 	} catch (out_of_range ex) {
 	 	cout << "   caught exception: " << ex.what() << endl; 
 	}
+
+
+
+    // not good case
+    try {
+		cout << ariel::snowman(3445) << endl;
+	} catch (out_of_range ex) {
+	 	cout << "   caught exception: " << ex.what() << endl; 
+	}
+
+
+
     
 	return 0;
 }
