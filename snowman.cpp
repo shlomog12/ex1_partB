@@ -31,7 +31,7 @@ const int MINIMUM_CHOICE = 1;
 const int MAXIMUM_CHOICE = 4;
 const int COUNTING_BASE = 10;
 
-enum class cases{
+enum cases{
     case_a=1,
     case_b,
     case_c
