@@ -32,9 +32,9 @@ const int MAXIMUM_CHOICE = 4;
 const int COUNTING_BASE = 10;
 
 enum cases{
-    case_a=1,
-    case_b,
-    case_c
+    CASE_A=1,
+    CASE_B,
+    CASE_C
 };
 
 
@@ -60,67 +60,67 @@ namespace ariel{
 
     string create_snowman_base(int choice){
         integrity_check(choice);
-        if (choice==case_a) { return " ( : ) ";}
-        if (choice==case_b) { return " (\" \") ";}
-        if (choice==case_c) { return " (___) ";}
+        if (choice==CASE_A) { return " ( : ) ";}
+        if (choice==CASE_B) { return " (\" \") ";}
+        if (choice==CASE_C) { return " (___) ";}
         return " (   ) ";
     }
 
     string create_snowman_torso(int choice){
         integrity_check(choice);
-        if (choice==case_a) { return "( : )";}
-        if (choice==case_b) { return "(] [)";}
-        if (choice==case_c) { return "(> <)";}
+        if (choice==CASE_A) { return "( : )";}
+        if (choice==CASE_B) { return "(] [)";}
+        if (choice==CASE_C) { return "(> <)";}
         return "(   )";
     }
 
     string create_upper_right_arm(int choice){
         integrity_check(choice);
-        if (choice==case_b) { return "/";}
+        if (choice==CASE_B) { return "/";}
         return " ";
       }
 
     string create_lower_right_arm(int choice){
         integrity_check(choice);
-        if (choice==case_a) { return ">";}
-        if (choice==case_c) { return "\\";}
+        if (choice==CASE_A) { return ">";}
+        if (choice==CASE_C) { return "\\";}
         return " ";
         }     
 
     string create_upper_left_arm(int choice){
             integrity_check(choice);
-             if (choice==case_b) { return "\\";}
+             if (choice==CASE_B) { return "\\";}
                 return " ";
              }
 
     string create_lower_left_arm(int choice){
             integrity_check(choice);
-            if (choice==case_a) { return "<";}
-            if (choice==case_c) { return "/";}
+            if (choice==CASE_A) { return "<";}
+            if (choice==CASE_C) { return "/";}
             return " ";
         }  
 
     string create_snowman_eye(int choice){
             integrity_check(choice);
-            if (choice==case_a) { return ".";}
-            if (choice==case_b) { return "o";}
-            if (choice==case_c) { return "O";}
+            if (choice==CASE_A) { return ".";}
+            if (choice==CASE_B) { return "o";}
+            if (choice==CASE_C) { return "O";}
             return "-";
         }
 
     string create_snowman_mouth(int choice){
         integrity_check(choice);
-        if (choice==case_a) { return ",";}
-        if (choice==case_b) { return ".";}
-        if (choice==case_c) { return "_";}
+        if (choice==CASE_A) { return ",";}
+        if (choice==CASE_B) { return ".";}
+        if (choice==CASE_C) { return "_";}
         return " ";
     }
 
     string create_snowman_head(int choice){
         integrity_check(choice);
-        if (choice==case_a) { return " _===_ ";}
-        if (choice==case_b) { return "  ___  \n ..... ";}
-        if (choice==case_c) { return "   _  \n  /_\\  ";}
+        if (choice==CASE_A) { return " _===_ ";}
+        if (choice==CASE_B) { return "  ___  \n ..... ";}
+        if (choice==CASE_C) { return "   _  \n  /_\\  ";}
         return "  ___  \n (_*_) ";
     }
 
@@ -178,3 +178,4 @@ namespace ariel{
     return ans;
 }
 }
+
